@@ -1,0 +1,46 @@
+// variables
+@app-header-height: 44px;
+
+@app-bg: #f5f5f5;
+@app-body-bg: #fff;
+@app-header-bg: RED;
+
+// 将网站设置为灰度模式，模式的值范围为0-1
+html.gray-mode {
+  filter: grayscale(0.9);
+  -webkit-filter: grayscale(0.9);
+}
+
+.app {
+  background-color: @app-bg;
+  .app-header {
+    height: @app-header-height;
+    background-color: @app-header-bg;
+  }
+  .app-body {
+    width: 1170px;
+    height: calc(100vh - @app-header-height);
+    background-color: @app-body-bg;
+    margin: 0 auto;
+
+    .article-box {
+      display: flex;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+      margin-top: 8px;
+      padding: 12px 12px;
+      .img {
+        width: 90px;
+        height: 90px;
+        background-color: red;
+        margin-right: 12px;
+      }
+      .content {
+        .title {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
